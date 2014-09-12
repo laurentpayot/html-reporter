@@ -3,6 +3,7 @@
 </body>
 
 <template name="velocity">
+  {{#if isDevelopment}}
   <div id="velocityOverlay" style="display: {{overlayIsVisible}};">
     <div class="container">
       {{#if resetting}}
@@ -45,6 +46,7 @@
      class="{{statusWidgetClass}} display-toggle"
      data-target="velocityOverlay"></a>
 
+  {{/if}}
 </template>
 
 <template name="velocityControlPanel">
