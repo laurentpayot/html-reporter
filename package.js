@@ -8,13 +8,15 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom("METEOR@1.0");
-  api.use('velocity:core@0.3.0', 'client');
+  api.use([
+    'velocity:core@0.4.2',
+    'velocity:shim@0.0.3'
+  ], ['server', 'client']);
 
   api.use(['underscore', 'templating','amplify@1.0.0', 'less'], 'client');
 
   api.addFiles('lib/reamplify.js', 'client');
 
-  api.addFiles('lib/velocity.js', 'client');
   api.addFiles('lib/client-report.html', 'client');
   api.addFiles('lib/client-report.js', 'client');
   api.addFiles('lib/client-report.less', 'client');

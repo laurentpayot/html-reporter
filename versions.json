@@ -53,10 +53,6 @@
       "1.0.2"
     ],
     [
-      "http",
-      "1.0.8"
-    ],
-    [
       "id-map",
       "1.0.1"
     ],
@@ -121,12 +117,12 @@
       "1.0.1"
     ],
     [
-      "url",
-      "1.0.2"
+      "velocity:core",
+      "0.4.2"
     ],
     [
-      "velocity:core",
-      "0.3.0"
+      "velocity:shim",
+      "0.0.3"
     ]
   ],
   "pluginDependencies": [],
