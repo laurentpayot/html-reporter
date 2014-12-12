@@ -10,7 +10,7 @@ Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0');
   api.use('velocity:core@0.3.2', 'client');
 
-  api.use(['underscore', 'templating','amplify@1.0.0', 'less'], 'client');
+  api.use(['underscore', 'templating','amplify@1.0.0', 'less', 'ordered-dict'], 'client');
 
   api.addFiles('lib/reamplify.js', 'client');
 

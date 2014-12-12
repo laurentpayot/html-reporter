@@ -233,6 +233,10 @@
     min-height:150px;
   }
 
+  li.suite.collapsed ul {
+    display: none;
+  }
+
   .velocity-section-header {
     border-bottom: @velocity-border;
     min-height: 30px;
@@ -253,7 +257,8 @@
     }
   }
 
-  .velocity-suite{
+  .velocity-suite {
+    text-align: left;
     border-bottom: solid 1px #efefef;
     padding-bottom: 15px;
     &:last-child{
@@ -298,7 +303,7 @@
       background-size: 100%;
     }
   }
-  
+
   .velocity-result-table {
     width:100%;
     text-align:left;

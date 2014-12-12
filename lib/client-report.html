@@ -117,27 +117,29 @@
       {{/if}}
     {{/unless}}
 
-    {{#each suites}}
-    {{#if suiteNotHidden}}
-      <div class="velocity-suite {{suiteStatus}}">
-        <div class="velocity-suite-header {{suiteStatus}}">
-          {{suite}}
-        </div>
-        <table class="velocity-result-table">
-          <tbody>
-          {{#each reports}}
-            {{> velocityTestReport}}
-          {{/each}}
-          </tbody>
-        </table>
-      </div>
-        {{/if}}
+    <ul class="velocity-suite">
+    {{#each suiteTrees}}
+      {{> resultTree}}
     {{/each}}
+    </ul>
   </section>
 </template>
 
+<template name="resultTree">
+  <li class="{{itemType}} {{collapsed}}">
+    <span class="name">{{name}}</span>
+    {{#if children}}
+    <ul>
+      {{#each children}}
+      {{> resultTree}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </li>
+</template>
+
 <template name="velocityTestReport">
-  {{#if reportNotHidden}}
+  {{#if showReport}}
     <tr class="velocity-test {{#if failed}}failed{{else}}passed{{/if}}">
       <td class="velocity-test-name">{{{name}}}</td> {{! XXX triple-stache allows curly quotes, etc. - worth it? }}
       <td class="velocity-test-time">{{#if failed}}Fail{{else}}{{duration}} ms{{/if}}</td>
