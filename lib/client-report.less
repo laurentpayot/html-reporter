@@ -1,19 +1,13 @@
 #velocityOverlay {
   @import "velocity.less";
 
-  z-index: 9000;
-
   // Kick it old school.
   box-sizing:content-box;
   * {
    box-sizing:content-box;
   }
 
-  position: fixed;
-  top: 0;
-  right: -780px;
-  max-width: 580px;
-  height:100vh;
+//  height:100vh;
   padding:0 50px 0px;
   border-left: @velocity-border;
   background: #fff;
@@ -23,11 +17,6 @@
   font-size: 14px;
   text-align:center;
   overflow-y: auto;
-  transition: right 0.25s ease-in-out;
-
-  &.visible {
-    right: 0;
-  }
 
   h1, h2, h3 {
     font-family: @velocity-font;
@@ -42,7 +31,7 @@
   .velocity-btn-close {
     border:0 none;
     background: transparent;
-    display: inline-block;
+    display: none;
     width:50px;
     height:50px;
     position:absolute;
@@ -98,7 +87,7 @@
       position: absolute;
       top: 25%;
       left: 25%;
-      width: 50%;
+//      width: 50%;
       height: 50%;
       background: @velocity-blue-dark;
       border-radius:100%;
@@ -458,5 +447,6 @@
 }
 
 #velocity-status-widget {
+  display:none;
   transition: right 0.25s ease-in-out;
 }
